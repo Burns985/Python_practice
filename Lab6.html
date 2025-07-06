@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Sticky Header */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: lightgray;
+    padding: 10px 0; /* Add padding for better appearance */
+  }
+
+  /* Flex container */
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust max-width as needed */
+  }
+
+  /* Main Menu */
+  .main-menu {
+    display: flex;
+    font: italic small-caps bold 20px Arial, sans-serif;
+    border: 2px solid lightblue;
+    padding: 6px;
+    margin: 3px;
+  }
+
+  /* Secondary Menu */
+  .secondary-menu {
+    display: inline-block;
+    font: italic small-caps bold 18px Arial, sans-serif;
+    border: 2px dotted lightgreen;
+    padding: 6px;
+    margin: 3px;
+  }
+
+  /* Body Content */
+  .body-content {
+    background: url('cui_logo.jpg') no-repeat;
+    /* Add more styles as needed */
+    padding: 20px; /* Added padding for better content separation */
+  }
+
+  /* List Styles */
+  ul {
+    list-style-type: upper-alpha;
+    list-style-position: outside;
+  }
+
+  ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: separate;
+    border: 1px solid black; /* Add border */
+    margin-bottom: 20px; /* Added margin for better separation */
+  }
+
+  th, td {
+    border: 1px solid black; /* Add border to table cells */
+    padding: 8px; /* Add padding to table cells */
+  }
+
+  /* Images */
+  img:nth-of-type(1) {
+    opacity: 0.3;
+  }
+
+  img:nth-of-type(2) {
+    opacity: 0.7;
+  }
+
+  img:nth-of-type(3) {
+    opacity: 1;
+  }
+
+  /* Div with content-box */
+  .content-box {
+    height: 125px;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: content-box;
+    background-color: rgba(255, 255, 255, 0.7); /* Added background color for visibility */
+  }
+
+  /* Div with border-box */
+  .border-box {
+    height: 125px;
+    width: 250px;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.7); /* Added background color for visibility */
+  }
+
+  /* Footer */
+  .footer-text {
+    text-shadow: 12px 24px rgba(0, 0, 0, 0.5); /* Adjust shadow */
+    font-size: 14px; /* Adjust font size */
+    text-align: center; /* Center align text */
+
+
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="sticky-header">Muhammad Muhaimin Sheeraz Mian (FA21-BSE-047)</div>
+    <div class="flex-container">
+      <nav class="main-menu">
+        <b><i>Favorites:</i></b>
+        <a href="https://www.linkedin.com/in/m-muhaimin-sheeraz-mian-b89970284/">LinkedIn</a>&nbsp;
+        <a href="https://open.spotify.com/embed/track/7cHsWWHeK6gJIOtiSze0Yp?utm_source=generator&theme=0">Song</a>&nbsp;
+        <a href="https://www.youtube.com/watch?v=muds1gFUTN8">Anthem</a>&nbsp;
+        <a href="https://mangaplus.shueisha.co.jp/titles/100056">Manga</a>&nbsp;
+        <a href="https://motionbgs.com/media/1194/vegeta-ultra-ego.960x540.mp4">Wallpaper</a>&nbsp;
+      </nav>
+      <nav class="secondary-menu">
+        <b><i>Contingency Plans:</i></b>
+        <a href="https://www.youtube.com/watch?v=6E1HVD2Emds&list=PLj75asqKLKpQHCAnyrW93OnXUtsl0TKZw&index=3&pp=iAQB">Perry the platypus</a>
+        <a href="https://www.youtube.com/watch?v=FTpUY4avH0M&list=PLj75asqKLKpQHCAnyrW93OnXUtsl0TKZw&index=8&pp=iAQB">Jackie Chan</a>
+        <a href="https://www.youtube.com/watch?v=kUaYc854i70&list=PLj75asqKLKpQHCAnyrW93OnXUtsl0TKZw&index=15&pp=iAQB">Jake the Dog</a>
+        <a href="https://www.youtube.com/watch?v=8QEi3Vpm1BM&list=PLj75asqKLKpQHCAnyrW93OnXUtsl0TKZw&index=32&pp=iAQB">Courage the Cowardly Dog</a>
+        <a href="https://www.youtube.com/watch?v=93dbvlFLQPs&list=PLj75asqKLKpQHCAnyrW93OnXUtsl0TKZw&index=34&pp=iAQB">Ben Tennyson</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="body-content">
+    <div class="flex-container">
+      <ul>
+        <li>Biryani</li>
+        <li>Nihari</li>
+        <li>Samosa</li>
+        <li>Haleem</li>
+        <li>Chapli Kebab</li>
+      </ul>
+      <ol>
+        <li>Noruwei no Mori by Haruki Murakami</li>
+        <li>Gogo no Eikō by Yukio Mishima</li>
+        <li>Kokoro by Natsume Soseki</li>
+        <li>Ningen Shikkaku by Osamu Dazai</li>
+        <li>Auto by Natsuo Kirino</li>
+      </ol>
+
+      <!-- Table for Pakistani Politicians -->
+      <table>
+        <caption>Pakistani Politicians</caption>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+        </tr>
+        <tr>
+          <td>Imran Khan</td>
+          <td>Prime Minister</td>
+        </tr>
+        <tr>
+          <td>Bilawal Bhutto Zardari</td>
+          <td>Chairman, Pakistan People's Party</td>
+        </tr>
+        <tr>
+          <td>Shehbaz Sharif</td>
+          <td>Leader of the Opposition</td>
+        </tr>
+      </table>
+
+      <!-- Table for US Politicians -->
+      <table>
+        <caption>US Politicians</caption>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+        </tr>
+        <tr>
+          <td>Joe Biden</td>
+          <td>President</td>
+        </tr>
+        <tr>
+          <td>Kamala Harris</td>
+          <td>Vice President</td>
+        </tr>
+        <tr>
+          <td>Nancy Pelosi</td>
+          <td>Speaker of the House</td>
+        </tr>
+      </table>
+
+      <!-- Images -->
+      <img src="download (1).jpeg" alt="Image 1">
+      <img src="download (2).jpeg" alt="Image 2">
+      <img src="download (3).jpeg" alt="Image 3">
+
+      <!-- Divs -->
+      <div class="content-box">
+        <video src="vid.mp4" controls class="content-box">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="border-box">
+        <video src="vid.mp4" controls class="border-box">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer-text">Muhammad Muhaimin Sheeraz Mian (FA21-BSE-047)</p>
+  </footer>
+</body>
+</html>

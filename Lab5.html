@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+
+    <style>
+        body {
+            background-color: green;
+            margin: 0;
+            padding: 0;
+            color: blue; /* Set text color to blue */
+            font-weight: bold; /* Set default font weight to bold */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .container > div {
+            flex: 1;
+            padding: 20px;
+            vertical-align: top;
+        }
+
+        .div-1 {
+            background-color: #ffaaaa;
+        }
+
+        .div-2 {
+            background-color: #aaffaa;
+        }
+
+        .back {
+            background-color: #add8e6;
+            padding: 20px;
+        }
+
+        input {
+            font-weight: normal; /* Set font weight of input fields to normal */
+        }
+
+        .button {
+            background-color: green; /* Set button background color to green */
+            font-weight: bold; /* Set button text font weight to bold */
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Style for disclaimer text */
+        .disclaimer {
+            color: red;
+        }
+    </style>
+</head>
+<body class="back">
+    <fieldset>
+        <legend align="center">Registration/LogIn Panel for CSC336 Course</legend>
+
+        <div class="container">
+            <div class="div-1">
+                <b><u>Registration Panel for CSC336 Course</u></b>
+                <br><br>
+
+                <label for="studentName">Student Name:</label>
+                <br><input type="text" id="studentName" name="studentName" pattern="[A-Z]{1}[a-z]{1,19}"
+                    title="Student name should start with a capital letter and be between 2 to 20 letters long." placeholder="Enter your name"
+                    required>
+                <br><br>
+
+                <label for="studentRegistration">Student Registration:</label>
+                <br><input type="text" id="studentRegistration" name="studentRegistration" pattern="[a-z]{2,20}"
+                    title="Last name should be between 2 to 20 lowercase letters." placeholder="Enter your registration"
+                    required>
+
+                <br><br>
+                <label for="cellNumber">Student Contact:</label>
+                <br><input type="tel" id="cellNumber" name="cellNumber" pattern="[0-9]{10}"
+                    title="Please enter a valid 10-digit phone number." placeholder="Enter your contact number"
+                    required>
+
+                <br><br>
+                <label for="sEmail">Student Email:</label>
+                <br><input type="email" id="sEmail" name="email" multiple placeholder="Enter your email"
+                    required>
+
+                <br><br>
+                <label for="password">Password:</label>
+                <br><input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <br><br>
+                <input type="checkbox" id="disclaimerCheckbox" name="disclaimerCheckbox" required>
+                <label for="disclaimerCheckbox" class="disclaimer">Disclaimer. I "Muhammad Muhaimin Sheeraz Mian
+                    FA21-BSE-047" agree to CSC336 course policy.</label>
+
+                <br><br>
+                <button type="submit" class="button">Register Course Form</button>
+
+                <br><br>
+                <button type="button" onclick="window.location.href='cancel.html';" class="button">Reset Course Form</button>
+            </div>
+
+            <div class="div-2">
+
+                <b><u>Login Panel for CSC336 Course</u></b>
+
+                <br><br>
+                <label for="email">Enter Email:</label>
+                <br><input type="email" id="email" name="email" multiple placeholder="Enter your email"
+                    required>
+
+                <br><br>
+                <label for="pass">Password:</label>
+                <br><input type="password" id="pass" name="password" placeholder="Enter your password" required>
+
+
+                <br><br><button type="submit" class="button">Login Course Panel</button>
+
+                <br><br><button type="button" onclick="window.location.href='cancel.html';" class="button">Cancel Course Panel</button>
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>

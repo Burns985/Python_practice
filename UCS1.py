@@ -1,0 +1,54 @@
+import heapq
+# Uniform Cost Search is Dijkstra's Algorithm which is focused on finding a  single
+# shortest path to a single finishing point rather than the shortest path to every point.
+# UCS does this by stopping as soon as the finishing point is found
+graph = {
+    'Arad': [('Zerind', 75), ('Timisoara', 118), ('Sibiu', 140)],
+    'Zerind': [('Arad', 75), ('Oradea', 71)],
+    'Oradea': [('Zerind', 71), ('Sibiu', 151)],
+    'Timisoara': [('Arad', 118), ('Lugoj', 111)],
+    'Lugoj': [('Timisoara', 111), ('Mehadia', 70)],
+    'Mehadia': [('Lugoj', 70), ('Drobeta', 75)],
+    'Drobeta': [('Mehadia', 75), ('Craiova', 120)],
+    'Craiova': [('Drobeta', 120), ('Rimnicu Vilcea', 146), ('Pitesti', 138)],
+    'Sibiu': [('Arad', 140), ('Oradea', 151), ('Fagaras', 99), ('Rimnicu Vilcea', 80)],
+    'Rimnicu Vilcea': [('Sibiu', 80), ('Craiova', 146), ('Pitesti', 97)],
+    'Fagaras': [('Sibiu', 99), ('Bucharest', 211)],
+    'Pitesti': [('Rimnicu Vilcea', 97), ('Craiova', 138), ('Bucharest', 101)],
+    'Bucharest': [('Fagaras', 211), ('Pitesti', 101)]
+}
+
+
+def uniform_cost_search(graph, start, goal):
+    visited = set()
+    heap = [(0, start, [start])]
+
+    while heap:
+        total_distance, current, path = heapq.heappop(heap)
+
+        if current in visited:
+            continue
+
+        visited.add(current)
+
+        if current == goal:
+            return path, total_distance
+
+        for neighbor, distance in graph.get(current, []):
+            if neighbor not in visited:
+                new_path = path + [neighbor]
+                new_distance = total_distance + distance
+                heapq.heappush(heap, (new_distance, neighbor, new_path))
+
+    return None, 0
+
+
+start_city = 'Arad'
+goal_city = 'Bucharest'
+shortest_path, total_distance = uniform_cost_search(graph, start_city, goal_city)
+
+if shortest_path:
+    print("Shortest path from {} to {}: {}".format(start_city, goal_city, shortest_path))
+    print("Total distance: {} km".format(total_distance))
+else:
+    print("There is no path from {} to {}.".format(start_city, goal_city))
